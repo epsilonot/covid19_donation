@@ -33,6 +33,12 @@ text-align: center;
 <script>
 async function displaydata(url) {
 let file = await fetch(url).then(r => r.text())
+
+
+	if(file[file.lenth - 1] == '\n')
+		file[file.lenth - 1 ] = ''
+
+
 let parsedData = file.split('\n').map(l => l.split(',').map(f => f.trim()))
 let header = parsedData[0]
 let data = parsedData.slice(1)
