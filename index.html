@@ -25,18 +25,10 @@ font-weight: bold;
 tr td:first-child {
 text-align: center;
 }
-
-/* div {
-	overflow-x: scroll;
-} */
 </style>
 </head>
 <body>
-	<!-- <div> -->
-		<table id="t"><thead id="h"></thead><tbody id="b"></tbody></table>
-
-
-	<!-- </div> -->
+<table id="t"><thead id="h"></thead><tbody id="b"></tbody></table>
 <p id="sum"></p>
 <script>
 async function displaydata(url) {
@@ -45,7 +37,7 @@ let parsedData = file.split('\n').map(l => l.split(',').map(f => f.trim()))
 let header = parsedData[0]
 let data = parsedData.slice(1)
 let th = `<tr> <th>No.</th> ${header.map(f => `<th>${f}</th>`).join('')} </tr>`
-let b = data.map((l, i) => `<tr> ${ `<td>${i + 1} </td>` + l.map((f, i) => `<td> ${  i == 0 || i == 5 ? cap(f) : f}</td>`).join('')}</tr>`).join('')	
+let b = data.map((l, i) => `<tr> ${ `<td>${i + 1} </td>` + l.map((f, i) => `<td> ${  i == 0 || i == 5 ? cap(f) : f}</td>`).join('')}</tr>`).join('')
 let s = 0
 data.forEach( l => s += Number(l[3]))
 sum.innerHTML = `Total amount = ${s.toString()} Taka`
