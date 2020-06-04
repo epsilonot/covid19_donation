@@ -39,7 +39,9 @@ let file = await fetch(url).then(r => r.text())
 		file[file.lenth - 1 ] = ''
 
 
-let parsedData = file.split('\n').map(l => l.split(',').map(f => f.trim()))
+
+let parsedData = file.split('\n').map(l => l.split(',').map(f => f.trim())).filter(l => l[0] != '')
+
 let header = parsedData[0]
 let data = parsedData.slice(1)
 let th = `<tr> <th>No.</th> ${header.map(f => `<th>${f}</th>`).join('')} </tr>`
