@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Donation list</title>
 <style>
 html {
@@ -10,7 +9,6 @@ margin: 0;
 }
 body {
 font-family: monospace;
-margin: 5em;
 }
 td, th {
 border: 1px solid black;
@@ -27,10 +25,18 @@ font-weight: bold;
 tr td:first-child {
 text-align: center;
 }
+
+/* div {
+	overflow-x: scroll;
+} */
 </style>
 </head>
 <body>
-<table id="t"><thead id="h"></thead><tbody id="b"></tbody></table>
+	<!-- <div> -->
+		<table id="t"><thead id="h"></thead><tbody id="b"></tbody></table>
+
+
+	<!-- </div> -->
 <p id="sum"></p>
 <script>
 async function displaydata(url) {
