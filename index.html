@@ -1,77 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-
-	<style>
-
-		html {
-			margin: 0;
-		}
-		body {
-			font-family: monospace;
-			margin: 5em;
-		}
-
-
-		#t td,
-		th {
-			border: 1px solid black;
-			padding: 5px;
-		}
-
-		table {
-			border-collapse: collapse;
-			margin: 50px auto;
-		}
-	</style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donation list</title>
+<style>
+html {
+margin: 0;
+}
+body {
+font-family: monospace;
+margin: 5em;
+}
+td, th {
+border: 1px solid black;
+padding: 5px;
+}
+table {
+border-collapse: collapse;
+margin: 50px auto;
+}
+p {
+text-align: center;
+font-weight: bold;
+}
+tr td:first-child {
+text-align: center;
+}
+</style>
 </head>
-
 <body>
-
-	<table id="t">
-		<thead id="h">
-
-		</thead>
-		<tbody id="b">
-
-		</tbody>
-	</table>
-
-
-	<script>
-
-
-
-		async function displaydata(url) {
-			let file = await fetch(url).then(r => r.text())
-			let parsedData = file.split('\n').map(l => l.split(',').map(f => f.trim()))
-
-
-			let header = parsedData[0]
-			let data = parsedData.slice(1)
-
-			let th = `<tr> <th>No.</th> ${header.map(f => `<th>${f}</th>`).join('')} </tr>`;
-
-			let b = data.map((l, i) => `<tr> ${ `<td>${i + 1} </td>` + l.map((f, i) => `<td> ${  i == 0 || i == 5 ? cap(f) : f}</td>`).join('')}</tr>`).join('')
-			
-			document.getElementById('h').innerHTML = th
-			document.getElementById("b").innerHTML = b
-		}
-		
-		displaydata("c19d.csv");
-
-		function cap(str) {
-			return str.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-		}
-
-		console.log(cap("tanvir ahmed"))
-
-	</script>
-</body>
-
-</html>
+<table id="t"><thead id="h"></thead><tbody id="b"></tbody></table>
+<p id="sum"></p>
+<script>
+async function displaydata(url) {
+let file = await fetch(url).then(r => r.text())
+let parsedData = file.split('\n').map(l => l.split(',').map(f => f.trim()))
+let header = parsedData[0]
+let data = parsedData.slice(1)
+let th = `<tr> <th>No.</th> ${header.map(f => `<th>${f}</th>`).join('')} </tr>`
+let b = data.map((l, i) => `<tr> ${ `<td>${i + 1} </td>` + l.map((f, i) => `<td> ${  i == 0 || i == 5 ? cap(f) : f}</td>`).join('')}</tr>`).join('')	
+let s = 0
+data.forEach( l => s += Number(l[3]))
+sum.innerHTML = `Total amount = ${s.toString()} Taka`
+document.getElementById('h').innerHTML = th
+document.getElementById("b").innerHTML = b
+}
+displaydata("c19d.csv")
+let cap = str => str.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+</script>
+</body></html>
