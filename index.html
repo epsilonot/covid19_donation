@@ -25,7 +25,7 @@ text-align: center;
 let f = await fetch(u).then(r => r.text())
 let p = f.split('\n').map(l => l.split(',').map(f => f.trim())).filter(l => l[0] != '')
 let d = p.slice(1)
-let th = `<tr><th>No.</th>${p[0].map(f => `<th>${f}`).join('')}</tr>`
+let th = `<tr><th>No.${p[0].map(f => `<th>${f}`).join('')}`
 let tb = d.map((l, i) => `<tr>${`<td>${i + 1}` + l.map((f, i) => `<td>${i == 0 || i == 5 ? c(f) : f}`).join('')}`).join('')
 let s = 0
 d.forEach(l => s += Number(l[3]))
