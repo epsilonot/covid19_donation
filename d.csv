@@ -1,22 +1,20 @@
-Name,                    Method, TNX_ID, Amount, Date, District
-rafiul islam borson,     bkash, 7F391EJOE7, 40, 03/06/20, dinajpur
-touhidul haque shovon,   bkash, 7F361D1RMW, 50, 03/06/20, faridpur
-rajowana bonna,          bkash, 7F35188FRL, 50, 03/06/20, dinajpur
-asik,                    bikas, 7F381870PI, 90, 03/06/20, dinajpur
-zibunnahar ema,          bkash, 7F461GCR1E, 100, 04/06/20, cumilla
-shariful islam,          bkash, 7F51OXDAT, 1020, 04/06/20 , cumilla
-mohammad bin sakib,      bkash, 7F471GX1LZ, 40,  04/06/20, dhaka
-jantatul ferdausi ayshi, bkash, 7F4910YALT, 40,  04/06/20, dhaka
-mufidul islam,           bkash, 7F431PAJIP, 40,  04/06/20, dhaka
-afridi alom pranto, roket, 1771156847, 51, 05/06/20, magura
-mushfika naznin tumpa, roket, 1771265889, 50, 05/06/20, magura
-maria uddin, bkash,7F52249YNO, 60, 05/06/20, chandpur
-sabbir hossain, bkash, 7F56271C3G, 40, 05/06/20, narshindi
-omar hasan siyam, cash, ,100, 05/06/20, narayanganj
-ashraful alam, bkash, 7F662N248C, 100, 06/06/20, gazipur
-mehedi hasan badhôn, bkash, 7F642LTJEE, 200, 06/06/20, dhaka
-fardin-e hasan fuad, roket, 1774035764, 40, 06/06/20, gaibandha
-omio, bkash, 7F682HEEUG, 50, 06/06/20, manikganj
-md hamim, bkash, 7F6420B38Q, 40, 06/06/20, barishal
-
-
+Name,Method,TNX_ID,Amount,Date,District
+rafiul islam borson,bkash,7F391EJOE7,40,03/06/20,dinajpur
+touhidul haque shovon,bkash,7F361D1RMW,50,03/06/20,faridpur
+rajowana bonna,bkash,7F35188FRL,50,03/06/20,dinajpur
+asik,bikas,7F381870PI,90,03/06/20,dinajpur
+zibunnahar ema,bkash,7F461GCR1E,100,04/06/20,cumilla
+shariful islam,bkash,7F51OXDAT,1020,04/06/20,cumilla
+mohammad bin sakib,bkash,7F471GX1LZ,40,04/06/20,dhaka
+jantatul ferdausi ayshi,bkash,7F4910YALT,40,04/06/20,dhaka
+mufidul islam,bkash,7F431PAJIP,40,04/06/20,dhaka
+afridi alom pranto,roket,1771156847,51,05/06/20,magura
+mushfika naznin tumpa,roket,1771265889,50,05/06/20,magura
+maria uddin,bkash,7F52249YNO,60,05/06/20,chandpur
+sabbir hossain,bkash,7F56271C3G,40,05/06/20,narshindi
+omar hasan siyam,cash, ,100, 05/06/20,narayanganj
+ashraful alam,bkash,7F662N248C,100,06/06/20,gazipur
+mehedi hasan badhôn,bkash,7F642LTJEE,200,06/06/20,dhaka
+fardin-e hasan fuad,roket,1774035764,40,06/06/20,gaibandha
+omio,bkash,7F682HEEUG,50,06/06/20,manikganj
+md hamim,bkash,7F6420B38Q,40,06/06/20,barishal
