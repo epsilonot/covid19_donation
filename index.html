@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <title>Donation list</title>
+<!-- LICENSE: CC0 -->
 <style>
 body{
 font-family: monospace;
@@ -22,16 +23,13 @@ text-align: center;
 <table><thead id="h"><tbody id="b"></table><p id="t">
 <script>
 (async function(u){
-let f = await fetch(u).then(r => r.text())
-let p = f.split('\n').map(l => l.split(',').map(f => f.trim())).filter(l => l[0] != '')
-let d = p.slice(1)
-let th = `<tr><th>No.${p[0].map(f => `<th>${f}`).join('')}`
-let tb = d.map((l, i) => `<tr>${`<td>${i + 1}` + l.map((f, i) => `<td>${i == 0 || i == 5 ? c(f) : f}`).join('')}`).join('')
-let s = 0
+let f = await fetch(u).then(r => r.text()),
+p = f.split('\n').map(l => l.split(',').map(f => f.trim())).filter(l => l[0] != ''),
+d = p.slice(1),
+s = 0
+h.innerHTML = `<tr><th>No.${p[0].map(f => `<th>${f}`).join('')}`
+b.innerHTML = d.map((l, i) => `<tr>${`<td>${i + 1}` + l.map((f, i) => `<td>${i == 0 || i == 5 ? f.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ') : f}`).join('')}`).join('')
 d.forEach(l => s += Number(l[3]))
-h.innerHTML = th
-b.innerHTML = tb
 t.innerHTML = `Total amount = ${s.toString()} Taka`
 })("d.csv")
-let c = s => s.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
 </script>
