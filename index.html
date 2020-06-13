@@ -30,6 +30,6 @@ s = 0
 h.innerHTML = `<tr><th>No.${p[0].map(f => `<th>${f}`).join('')}`
 b.innerHTML = d.map((l, i) => `<tr>${`<td>${i + 1}` + l.map((f, i) => `<td>${i == 0 || i == 5 ? f.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ') : f}`).join('')}`).join('')
 d.forEach(l => s += Number(l[3]))
-t.innerHTML = `Total amount = ${s.toString()} Taka`
+t.innerHTML = `Total Amount = ${s.toString()} Taka`
 })("d.csv")
 </script>
