@@ -1,17 +1,7 @@
 <!DOCTYPE html>
-<title>Donation list</title>
-<style>body{font:16px monospace}td,th{border:1px solid black;padding:5px}table{border-collapse:collapse;margin:50px auto}p{text-align:center;font-weight:bold}tr td:first-child{text-align:center}</style>
-<table><thead id="h"><tbody id="b"></table><p id="t">
-<script>
-// CC0
-(async function(u){
-let f = await fetch(u).then(r => r.text()),
-p = f.split('\n').map(l => l.split(',').map(f => f.trim())).filter(l => l[0] != ''),
-d = p.slice(1),
-s = 0
-h.innerHTML = `<tr><th>No.${p[0].map(f => `<th>${f}`).join('')}`
-b.innerHTML = d.map((l,i) => `<tr>${`<td>${i + 1}` + l.map((f,i) => `<td>${i == 0 || i == 5 ? f.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ') : f}`).join('')}`).join('')
-d.forEach(l => s += Number(l[3]))
-t.innerHTML = `Total Amount = ${s.toString()} Taka`
-})("d.csv")
-</script>
+<meta name="viewport" content="width=device-width">
+<title>Donation</title>
+<style>body{font: 16px monospace}</style>
+<ul>
+<li><a href="d/20/6">June 2020</a><p>Total:</br>fund received - 11399</br>donated - 0
+</ul>
