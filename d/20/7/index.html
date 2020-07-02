@@ -4,17 +4,16 @@
 <table><caption>Fund Received<thead id="h"><tbody id="b"></table><p id="x">
 <table><caption>Donated<thead id="H"><tbody id="B"></table><p id="y">
 <script>
-// CC0
+//CC0
 async function v(u,T,M,S){
-let f = await fetch(u).then(r => r.text()),
-p = f.split('\n').map(l => l.split(',').map(f => f.trim())).filter(l => l[0] != ''),
-d = p.slice(1),
-s = 0
-T.innerHTML = `<tr><th>No.${p[0].map(f => `<th>${f}`).join('')}`
-M.innerHTML = d.map((l,i) => `<tr>${`<td>${i + 1}` + l.map((f,i) => `<td>${((i == 0 || i == 5) && M == b) || ((i == 0 || i == 1 || i == 2) && M == B) ? f.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join( M == B && i == 1 ? ',' : ' ') : f}`).join('')}`).join('')
-d.forEach(l => s += Number(l[3]))
-S.innerHTML = `Total Amount = ${s.toString()} Taka`
-}
+let f=await fetch(u).then(r=>r.text()),
+p=f.split('\n').map(l=>l.split(',').map(f=>f.trim())).filter(l=>l[0]!=''),
+d=p.slice(1),
+s=0
+T.innerHTML=`<tr><th>No.${p[0].map(f=>`<th>${f}`).join('')}`
+M.innerHTML=d.map((l,i)=>`<tr>${`<td>${i+1}`+l.map((f,i)=>`<td>${(i==0||i==5&&M==b)||(i==0||i==1||i==2&&M==B)?f.split(' ').map(w=>w[0].toUpperCase()+w.slice(1)).join(M==B&&i==1?',':' '):f}`).join('')}`).join('')
+d.forEach(l=>s+=Number(l[3]))
+S.innerHTML=`Total Amount = ${s.toString()} Taka`}
 v("r.csv",h,b,x)
 v("d.csv",H,B,y)
 </script>
